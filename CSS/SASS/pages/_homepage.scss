@@ -1,0 +1,432 @@
+@use '../help/variable' as *;
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $flatWhite;
+    font-family: 'Open Sans', sans-serif;
+    width: 1262px;
+    margin: 0;
+}
+
+.header {
+    background-color: $flatGreen;
+    a {
+    color: $flatWhite;
+    width: 100%;
+    height: 24px;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+    }
+}
+
+.hederLogo {
+    background-color: $flatWhite;
+    height: 46px;
+    text-align: right;
+    padding: 12px 15px;
+    .user {
+        cursor: pointer;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.clearfix {
+    clear: both;
+}
+
+.secParHead {
+    .logo {
+        .logoLink {
+            padding: 0 15px;
+            a {
+                .logoImg {
+                        height: 110px;
+                        float: right;
+                }
+            }
+        }
+    }
+    .selection {
+        text-align: right;
+        margin-top: 45px;
+        .search {
+            .searchType {
+                .searchInput {
+                    width: 210px;
+                    height: 40px;
+                    border: 1px solid #0000004d;
+                    padding: 10px;
+                    right: 85px;
+                }
+                .resetButton {
+                    border: none;
+                    background-color: $flatWhite;
+                    right: 10px;
+                    bottom: 8px;
+                    color: rgba(0, 0, 0, 0.3019607843);
+                    right: 95px;
+                    bottom: 34px;
+                    .newSearch {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    .cardItem {
+        .zero {
+            bottom: 35px;
+            width: 27px;
+            border-radius: 50%;
+            padding-top: 2px;
+            right: 35px;
+            color: $flatWhite;
+            height: 27px;
+            background-color: $flatRed;
+            cursor: pointer;
+        }
+        .shoppingCard {
+            bottom: 33px;
+            background-color: $flatWhite;
+            right: -5px;
+            color: $flatRed;
+            .newSize {
+                height: 25px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.menu {
+    height: 90px;
+    .listItem {
+        ul {
+            li {
+                margin: 5px 15px;
+                font-weight: bold;
+                font-size: 1rem;
+                cursor: pointer;
+                position: relative;
+                &:hover {
+                    color: $flatGreen;
+                }
+                &:hover:before {
+                    content: "";
+                    left: 0;
+                    bottom: -4px;
+                    width: 100%;
+                    height: 3px;
+                    background-color: $flatGreen;
+                    position: absolute;
+                }
+            }
+        }
+    }
+}
+
+.landing {
+    .photoLanding {
+        a {
+            z-index: 1;
+            img {
+                height: 600px;
+            }
+        }
+        .overlay {
+            background-color: #ffffffab;
+            top: 25%;
+            height: 300px;
+            margin: 5px;
+            padding: 15px;
+            border: 1px solid #56763287;
+            border-radius: 25px;
+            width: 500px;
+            h2 {
+                width: 50%;
+                font-size: 3rem;
+                line-height: 3.5rem;
+                font-weight: bold;
+                margin-left: 25px;
+            }
+            p {
+                font-size: 1.5rem;
+                line-height: 2.25rem;
+                margin-left: 25px;
+                margin-top: 20px;
+            }
+        }
+        .randomPlay {
+            display: inline-flex;
+            width: 150px;
+            right: 10px;
+            height: 45px;
+            padding: 2px;
+            bottom: 10px;
+            .stepBack {
+                width: calc(142px / 3);
+                margin-right: 4px;
+                right: 0;
+                height: 100%;
+                background-color: $flatWhite;
+                cursor: pointer;
+                color: $flatGreen;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
+                border-radius: 10px;
+                &:hover{
+                background-color: rgb(255 255 255 / 60%);
+                color: rgb(86 117 51 / 60%);
+                }
+            }
+            .stepPlay {
+                height: 100%;
+                margin-right: 4px;
+                width: calc(142px / 3);
+                background-color: $flatWhite;
+                cursor: pointer;
+                color: $flatGreen;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
+                border-radius: 10px;
+                &:hover {
+                background-color: rgb(255 255 255 / 60%);
+                color: rgb(86 117 51 / 60%);
+                }
+            }
+            .stepForward {
+                height: 100%;
+                background-color: $flatWhite;
+                width: calc(142px / 3);
+                cursor: pointer;
+                color: $flatGreen;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
+                border-radius: 10px;
+                &:hover {
+                background-color: rgb(255 255 255 / 60%);
+                color: rgb(86 117 51 / 60%);
+                }
+            }
+        }
+        .sizePlay {
+            margin-top: 20%;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.landSubject {
+    .brandItem {
+        padding: 0;
+        .employeeLogo {
+            padding: 0 10px 0 0;
+            position: relative;
+            &::before {
+                content: "";
+                height: 55px;
+                width: 55px;
+                border: 2px solid #d3222a;
+                border-radius: 59px;
+                position: absolute;
+            }
+            a {
+                float: right;
+                .emLoCo {
+                    color: $flatRed;
+                }
+            }
+        }
+        .firstLogo::before {
+            top: -13px;
+            left: 67px;
+        }
+        .secondLogo::before {
+            top: -10px;
+            right: -3px;
+        }
+        .thirdLogo::before {
+            top: -11px;
+            right: -1px;
+        }
+        .fourLogo::before {
+            top: -11px;
+            right: 5px;
+        }
+        .employeeInfo {
+            font-style: italic;
+            margin-top: -15px;
+            font-weight: bold;
+            padding: 0 0 0 15px;
+            font-size: 1rem;
+        }
+    }
+    .Satisfaction {
+        width: 390px;
+    }
+    .Shipping {
+        width: 225px;
+    }
+    .paragraph {
+        margin-top: 7rem;
+        p {
+            padding: 0 15px;
+            line-height: 2.25rem;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+.about {
+    .OurSeeds {
+        margin-bottom: 45px;
+        .seedParagraph {
+            width: 700px;
+            margin: auto;
+            margin-top: 50px;
+            font-size: 1.25rem;
+            line-height: 2rem;
+            font-weight: bold;
+        }
+    }
+    .seedMenu {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 5px;
+        .photoSeed {
+            .photoOne {
+                a img {
+                    margin-bottom: 1rem;
+                }
+            }
+            h3 {
+                margin-bottom: 1.25rem;
+                font-weight: 500;
+            }
+            p {
+                line-height: 1.25rem;
+            }
+        }
+    }
+    .seedParagraph {
+        width: 700px;
+        font-weight: bold;
+        margin: auto;
+        margin-top: 50px;
+        font-size: 1.25rem;
+        line-height: 2rem;
+    }
+    .paragraphSize {
+        margin-top: 3.35rem;
+    }
+}
+
+.contact {
+    margin-top: 4rem;
+    .contactUs {
+        .telCont {
+            line-height: 1.5rem;
+            font-size: 1.25rem;
+            color: $flatGreen;
+            text-decoration: none;
+        }
+        ul {
+            margin-bottom: 0;
+            margin-top: 2.5rem;
+        }
+        li .socialMedia {
+            background-color: $flatGreen;
+            color: $flatWhite;
+            margin: 5px;
+        }
+    }
+    .emailUpdates {
+        p {
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+        }
+    }
+    .request {
+        p {
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+        }
+        a {
+            margin-top: 1rem;
+        }
+    }
+}
+a {
+    
+}
+
+
+.footer {
+    margin-top: 4rem;
+    .firstColl,
+    .secondColl,
+    .thirdColl,
+    .fourColl {
+        .footerSub a {
+            color: black;
+            &:hover {
+                color: $flatGreen;
+            }
+        }
+        ul li a {
+            color: black;
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline !important;
+                color: $flatGreen;
+                font-weight: 800;
+            }
+        }
+    }
+}
+
+.footerBottom {
+    background-color: $flatGreen;
+    width: 100%;
+    margin: auto;
+    color: $flatWhite;
+    li a {
+        color: $flatWhite;
+        text-decoration: none;
+    }
+    .footerRight {
+        .footerLink {
+            position: relative;
+            &::before {
+                width: 3px;
+                margin-top: 6px;
+                background-color: #fff;
+                position: absolute;
+                content: "";
+                right: -12px;
+                height: 15px;
+            }
+        }
+        ul li a {
+            &:hover {
+                text-decoration: underline !important;
+            }
+        }
+    }
+}
