@@ -1,5 +1,241 @@
-@use './SASS/pages/global' as *;
+@use '../help/variable' as *;
 
 @use '../pages/homepage' as *;
 
 @use '../pages/about' as *;
+
+// $maxMobile
+// $maxSmall
+// $maxMedium
+
+
+.menu {
+    @media (min-width: $maxSmall) and (max-width: $maxMedium) {
+        height: 130px;
+    }
+    .listItem {
+        ul {
+            @media (max-width: $maxMobile) {
+                width: 100%;
+                margin-left: 50px;
+                overflow: hidden;
+                .hide {
+                    display: none;
+                }
+            }
+            @media (min-width: $maxMobile) and (max-width: $maxSmall) {
+                width: 100%;
+                margin-left: 50px;
+                overflow: hidden;
+                .hide {
+                    display: none;
+                }
+            }
+            @media (min-width: $maxSmall) and (max-width: $maxMedium) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.landing {
+    .photoLanding {
+        .overlay {
+            @media (max-width: $maxMobile) {
+                width: 260px;
+                height: 250px;
+            }
+            h2 {
+                @media (max-width: $maxMobile) {
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                }
+            }
+            p {
+                @media (max-width: $maxMobile) {
+                    font-size: 1rem;
+                    line-height: 2rem;
+                    font-weight: bold;
+                }
+            }
+            .shopButton {
+                @media (max-width: $maxMobile) {
+                    margin-top: 60px;
+                }
+            }
+        }
+    }
+}
+
+.landSubject {
+    .brandItem {
+        @media (max-width: $maxSmall) {
+            width: 50%;
+            margin-top: 25px;
+            margin-right: 10px;
+        }
+        @media (min-width: $maxSmall) and (max-width: $maxMedium) {
+            width: 50%;
+            margin-top: 25px;
+        }
+        .firstLogo {
+            &::before {
+                @media (max-width: $maxMobile) {
+                    margin-left: -37px;
+                }
+                @media (min-width: $maxMobile) and (max-width: $maxSmall) {
+                    left: 85px;
+                }
+                @media (min-width: $maxSmall) and (max-width: $maxMedium) {
+                    left: 130px;
+                }
+            }
+            @media (min-width: $maxMobile) and (max-width: $maxSmall) {
+                margin-bottom: 50px;
+            }
+        }
+    }
+    .Satisfaction,
+    .Shipping {
+        @media (min-width: $maxSmall) and (max-width: $maxMedium) {
+            margin-top: 50px;
+        }
+    }
+}
+
+.about {
+    .OurSeeds {
+        .seedParagraph {
+            @media (max-width: $maxMobile) {
+                overflow: hidden;
+                font-size: 1rem;
+                line-height: 1.5rem;
+                width: 100%;
+            }
+        }
+    }
+    .seedMenu {
+        .photoSeed {
+            @media (max-width: $maxSmall) {
+                width: 50%;
+                margin-bottom: 50px;
+                margin-left: 0px;
+            }
+            @media (min-width: $maxSmall) and (max-width: $maxMedium) {
+                margin-bottom: 50px;
+            }
+            .shopButton {
+                @media (max-width: $maxMobile) {
+                    margin-left: 0px;
+                }
+            }
+        }
+    }
+    .ourTools {
+        .seedParagraph {
+            @media (max-width: $maxMobile) {
+                width: 100%;
+                font-size: 1rem;
+                line-height: 1.5rem;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+.newSize {
+    .shopButton {
+        @media (max-width: $maxMobile) {
+            margin-top: 30px !important;
+        }
+    }
+}
+
+.contact {
+    .emailUpdates {
+        @media (max-width: $maxMobile) {
+            margin-top: 50px !important;
+            margin-bottom: 50px !important;
+        }
+    }
+    .request {
+        @media (min-width: $maxSmall) and (max-width: $maxMedium) {
+            margin-bottom: 50px;
+            margin-top: 75px !important;
+        }
+    }
+}
+
+.footer {
+    .firstColl {
+        @media (max-width: $maxMobile) {
+            width: 50%;
+        }
+        @media (min-width: $maxSmall) and (max-width: $maxMedium) {
+            text-align: center;
+        }
+    }
+    .secondColl {
+        @media (max-width: $maxMobile) {
+            width: 50%;
+        }
+        @media (min-width: $maxSmall) and (max-width: $maxMedium) {
+            text-align: center;
+        }
+    }
+    .thirdColl {
+        @media (max-width: $maxMobile) {
+            width: 50%;
+        }
+        @media (min-width: $maxSmall) and (max-width: $maxMedium) {
+            text-align: center;
+        }
+    }
+    .fourColl {
+        @media (max-width: $maxMobile) {
+            width: 50%;
+        }
+        @media (min-width: $maxSmall) and (max-width: $maxMedium) {
+            text-align: center;
+        }
+    }
+}
+
+.footerBottom {
+    .footerLeft {
+        @media (min-width: $maxMobile) and (max-width: $maxSmall) {
+            width: 50%;
+        }
+        span {
+            @media (max-width: $maxSmall) {
+                margin-left: 25%;
+            }
+            @media (min-width: $maxSmall) and (max-width: $maxMedium) {
+                margin-top: 15px;
+            }
+        }
+    }
+    .footerRight {
+        @media (min-width: $maxMobile) and (max-width: $maxSmall) {
+            width: 50%;
+        }
+        ul {
+            li {
+                .footerLink {
+                    &::before {
+                        @media (max-width: $maxSmall) {
+                            display: none;
+                        }
+                        @media (min-width: $maxSmall) and (max-width: $maxMedium) {
+                        display: none;
+                    }
+                    }
+                    @media (min-width: $maxMobile) and (max-width: $maxSmall) {
+                        padding: 5px;
+                        margin: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+}
